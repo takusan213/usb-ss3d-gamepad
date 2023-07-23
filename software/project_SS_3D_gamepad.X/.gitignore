@@ -1,0 +1,11 @@
+/debug
+/build
+/nbproject/*
+!/nbproject/configurations.xml
+!/nbproject/project.xml
+
+/dist/default/*
+!/dist/default/production
+/dist/default/production/*
+!/dist/default/production/*.hex
+
