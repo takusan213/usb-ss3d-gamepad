@@ -7,7 +7,7 @@ https://geekyfab.com/support_ss3d_gamepad
 You can read more details there.   
 
 # Demo
-[!['USB SEGA Multicontroller Demo']('https://github.com/takusan213/usb-ss3d-gamepad/assets/78714269/0061b51e-b496-4016-aa5c-1cd539da3a73')]('https://www.youtube.com/watch?v=o0ukZ1JmDkk')
+[![USB SEGA Multicontroller Demo](https://private-user-images.githubusercontent.com/78714269/261855793-95570b60-6f9e-4da2-9e6b-d4bfd5d97a90.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE2OTI1MzkzOTIsIm5iZiI6MTY5MjUzOTA5MiwicGF0aCI6Ii83ODcxNDI2OS8yNjE4NTU3OTMtOTU1NzBiNjAtNmY5ZS00ZGEyLTllNmItZDRiZmQ1ZDk3YTkwLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzA4MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMwODIwVDEzNDQ1MlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTkzMzJlMzlhY2ViNGE2MjMxNDYxZWY4NmQzZmEyY2M4ZTM2MTNiNWJjMjQyODA3YzMzNzI2ZmU3YWRiODQ4ODcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.8FLVte5skHQOYvQi3AL9zNIUyAOX83MXaqHHyoH3LE4)](https://youtu.be/o0ukZ1JmDkk)
 
 # Features
 In this project, I share circuit and firmware.  
