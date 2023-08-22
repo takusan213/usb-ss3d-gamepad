@@ -1,4 +1,6 @@
-# usb-ss3d-gamepad
+# USB Unit for SEGA Multi Controller
+![title_USB_Unit](https://github.com/takusan213/usb-ss3d-gamepad/assets/78714269/f2cc9108-19a0-4306-9e2b-55d688833a81)
+
 This project remakes your SEGA Multi Controller (aka 3D Control Pad in US) into a usb gamepad.
 Let's play retro games as well as recent games distributed on Steam with your USB Multi Controller!   
 
@@ -7,7 +9,11 @@ https://geekyfab.com/support_ss3d_gamepad
 You can read more details there.   
 
 # Demo
-[![USB SEGA Multicontroller Demo](https://github.com/takusan213/usb-ss3d-gamepad/assets/78714269/af0d5bb0-9af3-4103-bfad-c1e88fc29ca6)](https://youtu.be/o0ukZ1JmDkk)
+![SS3D_PV_kumitate](https://github.com/takusan213/usb-ss3d-gamepad/assets/78714269/a0db18d1-e28b-4e45-8e82-00c8482a8d21)
+
+![SS3D_PV_game](https://github.com/takusan213/usb-ss3d-gamepad/assets/78714269/a99d5fb9-34ff-459f-88a3-0ec4e71078f0)
+
+https://youtu.be/o0ukZ1JmDkk
 
 # Features
 In this project, I share circuit and firmware.  
