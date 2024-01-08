@@ -29,12 +29,14 @@ limitations under the License.
 #include "usb_device_hid.h"
 
 typedef struct _Flags{
-    uint8_t crosskey_flag :2 ;
+    uint8_t analog_stick_flag :1 ;
+    uint8_t :1 ;
     uint8_t sw_flag :1 ;
     uint8_t tr_flag :1 ;
     uint8_t tl_flag :1 ;
     uint8_t digital_flag :1 ;
-    uint8_t :2 ;
+    uint8_t abxy_flip_flag :1 ;
+    uint8_t :1 ;
 } Flags;
 
 Flags flags;
@@ -122,9 +124,10 @@ void readControllerData(){
 
 
 void App_DeviceGamepadInit(void){
-    flags.crosskey_flag = 0;
+    flags.analog_stick_flag = false;
     flags.sw_flag = false;    
     flags.digital_flag = false;
+    flags.abxy_flip_flag = false;
 }
 
 void App_DeviceGamepadAct(INPUT_CONTROLS* gamepad_input){
@@ -212,12 +215,48 @@ void App_DeviceGamepadAct(INPUT_CONTROLS* gamepad_input){
         gamepad_input->val[6] = controller_data.members.trigers.RT;            
     }
     
-    
+    if (flags.abxy_flip_flag == true){
+        uint8_t temp_button = gamepad_input->members.buttons.a;
+        gamepad_input->members.buttons.a = gamepad_input->members.buttons.b;
+        gamepad_input->members.buttons.b = temp_button;
+        
+        temp_button = gamepad_input->members.buttons.x;
+        gamepad_input->members.buttons.x = gamepad_input->members.buttons.y;
+        gamepad_input->members.buttons.y = temp_button;
+    }    
+        
     return;
 
 }
 
 
+void swapABXY(void){
+    uint16_t cnt_timer =0;
+    
+    if ( (!controller_data.members.buttons.start) && (!controller_data.members.buttons.up)){
+        INTCONbits.TMR0IF = 0;          // reset timer0 interrupt flag
+        TMR0bits.TMR0 = (uint8_t)5;
+        cnt_timer = 0;
+        while((!controller_data.members.buttons.start) && (!controller_data.members.buttons.up)){
+            if(INTCONbits.TMR0IF){          // INTCONbits.TMR0IF happens every 4ms
+                readControllerData();
+                cnt_timer++;
+                if(cnt_timer >=250){        // 1s
+                    flags.abxy_flip_flag = ~(flags.abxy_flip_flag);
+                    cnt_timer =0;
+                    while((!controller_data.members.buttons.start) && (!controller_data.members.buttons.up)){
+                            __delay_ms(20);     //readControllerData()?????????????????. 10ms?????????????20ms???.
+                            readControllerData();
+                    }
+                }
+                INTCONbits.TMR0IF = 0;
+                TMR0bits.TMR0 = (uint8_t)5;
+            }
+        }
+    }
+        
+    return;
+}
 
 
 #endif	/* MY_APP_DEVICE_GAMEPAD_C */

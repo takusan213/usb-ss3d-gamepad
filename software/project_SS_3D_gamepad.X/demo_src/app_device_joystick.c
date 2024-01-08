@@ -105,6 +105,8 @@ void APP_DeviceJoystickTasks(void)
         //Send the packet over USB to the host.
         lastTransmission = HIDTxPacket(JOYSTICK_EP, (uint8_t*)&joystick_input, sizeof(joystick_input));
 
+        // abxy swap function
+        swapABXY();        
     }
     
 }//end ProcessIO

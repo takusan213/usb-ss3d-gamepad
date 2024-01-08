@@ -27,8 +27,8 @@ limitations under the License.
 
 void App_DeviceGamepadInit(void);
 void App_DeviceGamepadAct(INPUT_CONTROLS* gamepad_input);
-void ChangeSWMode_Button_Start(void);
-void ChangeSWMode_Button_Select(void);
+void swapABXY(void);
+
 
 #endif	/* MY_APP_DEVICE_GAMEPAD_H */
 
