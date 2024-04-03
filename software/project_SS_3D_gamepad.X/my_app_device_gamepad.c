@@ -156,7 +156,7 @@ void App_DeviceGamepadAct(INPUT_CONTROLS* gamepad_input){
     gamepad_input->members.buttons.R2 = 0;
     gamepad_input->members.buttons.left_stick = 0;
     gamepad_input->members.buttons.right_stick = 0;
-    gamepad_input->members.buttons.home = 0;
+    gamepad_input->members.buttons.home = BUTTON_IsPressed(TACTSW);
         
 
     //hat switch

@@ -19,6 +19,7 @@ limitations under the License.
 
 #define PIN_DET         PORTAbits.RA3
 #define PIN_TL          PORTAbits.RA4
+#define TACTSW          PORTAbits.RA5
 #define PIN_D0_UP       PORTBbits.RB6
 #define PIN_D1_DOWN     PORTBbits.RB7
 #define PIN_D2_LEFT     PORTBbits.RB5

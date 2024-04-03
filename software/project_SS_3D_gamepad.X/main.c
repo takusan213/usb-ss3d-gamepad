@@ -40,8 +40,8 @@ MAIN_RETURN main(void)
     USBDeviceInit();
     USBDeviceAttach();
 
-    /* set RA4 to input*/
-    TRISA = 0x10;
+    /* set RA4, RA5 to input*/
+    TRISA = 0x30;
     
     /* set all B ports input*/
     TRISB = 0xf0;
@@ -52,7 +52,7 @@ MAIN_RETURN main(void)
     /* enabling internal pull up*/
     OPTION_REGbits.nWPUEN = 0;
     WPUA = 0x30;
-    WPUB = 0x70;
+    WPUB = 0xf0;
     
     /* all ports used as degital ports.*/
     ANSELA = 0x00;
