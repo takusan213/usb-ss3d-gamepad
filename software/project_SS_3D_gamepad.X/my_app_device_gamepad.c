@@ -186,7 +186,23 @@ void App_DeviceGamepadAct(INPUT_CONTROLS* gamepad_input){
         }
     }
     
+    //set xy axis
+    if(BUTTON_IsPressed(STICK_D)){
+        gamepad_input->val[7] = 0x00;
+    } else if (BUTTON_IsPressed(STICK_A)){
+        gamepad_input->val[7] = 0xFF;
+    } else{
+        gamepad_input->val[7] = 0x80;
+    }
 
+    if(BUTTON_IsPressed(STICK_C)){
+        gamepad_input->val[8] = 0x00;
+    } else if (BUTTON_IsPressed(STICK_B)){
+        gamepad_input->val[8] = 0xFF;
+    } else{
+        gamepad_input->val[8] = 0x80;
+    }    
+    
 
 
     if(flags.digital_flag){

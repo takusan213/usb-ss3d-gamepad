@@ -46,8 +46,9 @@ MAIN_RETURN main(void)
     /* set all B ports input*/
     TRISB = 0xf0;
     
-    /* set RC2~7 to output*/
-    TRISC = 0x03;
+    /* set RC3,4 to output*/
+    /* set RC0,1,2,5,6,7 to input*/
+    TRISC = 0xe7;
     
     /* enabling internal pull up*/
     OPTION_REGbits.nWPUEN = 0;

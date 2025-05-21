@@ -27,3 +27,8 @@ limitations under the License.
 
 #define PIN_S0_TH       LATCbits.LATC3
 #define PIN_S1_TR       LATCbits.LATC4
+
+#define STICK_A         PORTCbits.RC6
+#define STICK_B         PORTCbits.RC2
+#define STICK_C         PORTCbits.RC7
+#define STICK_D         PORTCbits.RC5

@@ -282,8 +282,10 @@ const struct{uint8_t report[HID_RPT01_SIZE];}hid_rpt01={{
   0x09,0x31,        //  USAGE(Y)
   0x09,0x32,        //  USAGE(Z)
   0x09,0x35,        //  USAGE(Rz)          
+  0x09,0x33,        //  USAGE(Rx)          
+  0x09,0x34,        //  USAGE(Ry)          
   0x75,0x08,        //  REPORT_SIZE(8)
-  0x95,0x04,        //  REPORT_COUNT(4)
+  0x95,0x06,        //  REPORT_COUNT(6)
   0x81,0x02,        //  INPUT(Data,Var,Abs)
   0xC0              //END_COLLECTION
 }

@@ -74,9 +74,11 @@ typedef union _INTPUT_CONTROLS_TYPEDEF
             uint8_t Y;
             uint8_t Z;
             uint8_t Rz;            
+            uint8_t Rx;
+            uint8_t Ry;                        
         } analog_stick;
     } members;
-    uint8_t val[7];
+    uint8_t val[9];
 } INPUT_CONTROLS;
 
 typedef union _CONTROLLER_DATA_TYPEDEF
@@ -118,8 +120,13 @@ typedef union _CONTROLLER_DATA_TYPEDEF
             uint8_t RT;
             uint8_t LT;
         }trigers;
+        struct
+        {
+            uint8_t Rx;
+            uint8_t Ry;
+        }ex_sticks;
     } members;
-    uint8_t val[8];
+    uint8_t val[10];
 }CONTROLLER_DATA;
 
 /** VARIABLES ******************************************************/

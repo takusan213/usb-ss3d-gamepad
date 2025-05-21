@@ -167,7 +167,7 @@ please contact mla_licensing@microchip.com
 #define HID_INT_OUT_EP_SIZE     64
 #define HID_INT_IN_EP_SIZE      64
 #define HID_NUM_OF_DSC          1
-#define HID_RPT01_SIZE          74      //number of report descriptor
+#define HID_RPT01_SIZE          78      //number of report descriptor
 
 /** DEFINITIONS ****************************************************/
 
